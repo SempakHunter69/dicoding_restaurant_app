@@ -53,6 +53,24 @@ class RestaurantDetailCard extends StatelessWidget {
                       fontSize: 12,
                     ),
               ),
+              const SizedBox(
+                width: 4,
+              ),
+              const Icon(
+                Icons.star,
+                color: primaryColor,
+                size: 20,
+              ),
+              const SizedBox(
+                width: 4,
+              ),
+              Text(
+                restaurantElement.rating.toString(),
+                style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                      color: textColor,
+                      fontSize: 12,
+                    ),
+              ),
             ],
           ),
           const SizedBox(
@@ -127,6 +145,28 @@ class RestaurantDetailCard extends StatelessWidget {
                 ],
               ),
             ],
+          ),
+          const SizedBox(
+            height: 10,
+          ),
+          Text(
+            'About Us',
+            style: Theme.of(context).textTheme.titleLarge!.copyWith(
+                  color: Colors.black,
+                  fontSize: 20,
+                ),
+          ),
+          const SizedBox(
+            height: 5,
+          ),
+          Text(
+            restaurantElement.description,
+            maxLines: 5,
+            overflow: TextOverflow.ellipsis,
+            style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                  color: Colors.black,
+                  fontSize: 12,
+                ),
           ),
         ],
       ),

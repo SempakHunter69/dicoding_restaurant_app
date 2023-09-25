@@ -36,58 +36,63 @@ class RestaurantCard extends StatelessWidget {
               const SizedBox(
                 width: 15,
               ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    restaurantElement.name,
-                    style: Theme.of(context).textTheme.labelLarge!.copyWith(
-                          color: Colors.black,
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      restaurantElement.name,
+                      overflow: TextOverflow.ellipsis,
+                      style: Theme.of(context).textTheme.labelLarge!.copyWith(
+                            color: Colors.black,
+                          ),
+                    ),
+                    const SizedBox(
+                      height: 5,
+                    ),
+                    Row(
+                      children: [
+                        const Icon(
+                          Icons.location_on,
+                          color: primaryColor,
+                          size: 10,
                         ),
-                  ),
-                  const SizedBox(
-                    height: 5,
-                  ),
-                  Row(
-                    children: [
-                      const Icon(
-                        Icons.location_on,
-                        color: primaryColor,
-                        size: 10,
-                      ),
-                      const SizedBox(
-                        width: 4,
-                      ),
-                      Text(
-                        restaurantElement.city,
-                        style: Theme.of(context).textTheme.labelSmall!.copyWith(
-                              color: Colors.black,
-                            ),
-                      )
-                    ],
-                  ),
-                  const SizedBox(
-                    height: 5,
-                  ),
-                  Row(
-                    children: [
-                      const Icon(
-                        Icons.star,
-                        color: primaryColor,
-                        size: 10,
-                      ),
-                      const SizedBox(
-                        width: 4,
-                      ),
-                      Text(
-                        restaurantElement.rating.toString(),
-                        style: Theme.of(context).textTheme.labelSmall!.copyWith(
-                              color: Colors.black,
-                            ),
-                      )
-                    ],
-                  ),
-                ],
+                        const SizedBox(
+                          width: 4,
+                        ),
+                        Text(
+                          restaurantElement.city,
+                          style:
+                              Theme.of(context).textTheme.labelSmall!.copyWith(
+                                    color: Colors.black,
+                                  ),
+                        )
+                      ],
+                    ),
+                    const SizedBox(
+                      height: 5,
+                    ),
+                    Row(
+                      children: [
+                        const Icon(
+                          Icons.star,
+                          color: primaryColor,
+                          size: 10,
+                        ),
+                        const SizedBox(
+                          width: 4,
+                        ),
+                        Text(
+                          restaurantElement.rating.toString(),
+                          style:
+                              Theme.of(context).textTheme.labelSmall!.copyWith(
+                                    color: Colors.black,
+                                  ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
               ),
               const Spacer(),
               ElevatedButton(
